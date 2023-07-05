@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Gro-Mama</string>
+    <string-array name="Delivery">
+        <item> Door step</item>
+        <item>Pick up point</item>
+    </string-array>
+    <string-array name="Payment">
+        <item> Mpesa</item>
+        <item>On Delivery</item>
+    </string-array>
+    <string name="Names">
+        <item> Apples</item>
+        <item>Oranges</item>
+
+    </string>
+    <string name="Price">
+         <item>Ksh 30</item>
+        <item>Ksh 10</item>
+
+    </string>
+</resources>
