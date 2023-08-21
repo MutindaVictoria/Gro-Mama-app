@@ -12,17 +12,18 @@ class SignUp : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding =ActivitySignUpBinding.inflate(layoutInflater)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
     override fun onResume() {
         super.onResume()
         setContentView(binding.root)
-        binding.button.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
             validateSignUp()
         }
         binding.textView36.setOnClickListener {
-            val intent=Intent(this, LogIn::class.java)
+            val intent = Intent(this, LogIn::class.java)
             startActivity(intent)
         }
 
@@ -30,41 +31,52 @@ class SignUp : AppCompatActivity() {
 
 
     fun validateSignUp() {
-        val name = binding.etName.text.toString()
-        val phoneNo=binding.etPhoneNo.text.toString()
-        val password =binding.etPassword .text.toString()
-        val email =binding.etEmail .text.toString()
+        val firstName = binding.etName.text.toString()
+        val lastName=binding.etNamee.text.toString()
+        val phoneNo = binding.etPhoneNo.text.toString()
+        val password = binding.etPassword.text.toString()
+        val confirmPassword=binding.etPasswordConfirm.text.toString()
+        val email = binding.etEmail.text.toString()
         var error = false
-        if (name.isBlank()) {
-//            binding.tilEnterName.error=null
-            binding.tilName.error = "Name required"
-            error=true
+        if (firstName.isBlank()) {
+            binding.tilName.error = "FirstName required"
+            error = true
+        }
+        if (lastName.isBlank()) {
+            binding.tilNamee.error = "LastName required"
+            error = true
         }
         if (phoneNo.isBlank()) {
-//            binding.tilPhoneNo.error=null
             binding.tilPhoneNo.error = "Phone Number required"
-            error=true
+            error = true
         }
         if (password.isBlank()) {
-//            binding.tilPassword.error=null
             binding.tilPassword.error = "Password name required"
-            error=true
-    val email =binding.etEmail .text.toString()
+            error = true
+            val email = binding.etEmail.text.toString()
         }
         if (email.isBlank()) {
-            binding.tilEmail.error = "Email name required"
-            error=true
+            binding.tilEmail.error = "Email required"
+            error = true
         }
-        if (password!=password){
-            binding.tilPassword .error="Password confirmation does not match with the password"
-            error=true
+        if (confirmPassword.isBlank()) {
+            binding.tilPasswordconfirm.error = "Confirm your password"
+            error = true
+            val confirmPassword = binding.etPasswordConfirm.text.toString()
         }
-//        to keep track if an error has occured
-        if (!error){
-            Toast.makeText(this,"$name$email $password",
-                Toast.LENGTH_LONG).show()
-//            to remove the validation
+        if (password != password) {
+            binding.tilPassword.error = "Password confirmation does not match with the password"
+            error = true
         }
+        if (!error) {
+            val intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
+
     }
 }
+
+
+
+
 

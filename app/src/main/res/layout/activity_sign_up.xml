@@ -4,43 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e9ecef"
     tools:context=".SignUp">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="165dp"
-        android:layout_height="106dp"
+        android:layout_width="166dp"
+        android:layout_height="89dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kibanda2" />
 
+
     <TextView
         android:id="@+id/tvAlready"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="164dp"
         android:text="Already have an account ?"
-        android:textSize="20dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="Sign Up"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="156dp"
+        android:backgroundTint="#69db7c"
+        android:text="sign up"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilPasswordconfirm" />
 
@@ -61,7 +62,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="50dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -81,7 +82,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNamee"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="50dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -102,7 +103,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPhoneNo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             app:prefixText="+254" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,7 +125,7 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
 
-            android:layout_height="wrap_content" />
+            android:layout_height="50dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -145,7 +146,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="50dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -166,21 +167,20 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPasswordConfirm"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold" />
+            android:layout_height="50dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="88dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="148dp"
+        android:layout_width="89dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="70dp"
         android:hint="Sign in"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAlready" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPasswordconfirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
